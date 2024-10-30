@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaría de Resiliencia frente a la Sequía y el Calor - Madrid</title>
+    <style>
+        /* Estilos Generales */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ECF0F1;
+            color: #2C3E50;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2C3E50;
+        }
+
+        /* Encabezado */
+        .header-status-bar {
+            background-color: #D35400;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+            font-size: 0.85em;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: #ffffff;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .additional-logo {
+            height: 60px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-menu a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sección Inicio */
+        .welcome-section {
+            background: url(images/isologo2.png) no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .welcome-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .welcome-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffffff; /* Color blanco para el título */
+        }
+
+        .welcome-content p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /* Monitoreo */
+        .monitor-section {
+            background-color: #f9f7f6;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .monitor-content {
+            display: flex;
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .monitor-map img {
+            width: 300px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+        }
+
+        .monitor-indicators {
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        /* Programas */
+        .program-section {
+            padding: 40px 20px;
+            background-color: #e9ecef;
+        }
+
+        .program-cards {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .program-card {
+            width: 280px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #2C3E50;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .program-card h3 {
+            margin-top: 0;
+        }
+
+        .program-status {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-container {
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 15px;
+            margin-top: 10px;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #D35400;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Color de la barra según el progreso */
+        .progress[data-value="100"] { background-color: #27ae60; } /* Verde */
+        .progress[data-value="90"] { background-color: #2ecc71; } /* Verde claro */
+        .progress[data-value="70"] { background-color: #f39c12; } /* Naranja oscuro */
+        .progress[data-value="50"] { background-color: #e67e22; } /* Naranja */
+        .progress[data-value="30"] { background-color: #D35400; } /* Naranja oscuro */
+
+        /* Sección de Isabél Sánchez */
+        .chief-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .chief-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .chief-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .chief-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            background-image: url(images/Isabél.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .chief-text {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .chief-text h3 {
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .chief-text p {
+            line-height: 1.6;
+        }
+
+        /* Asistente Conversacional */
+        .contact-section {
+            padding: 40px 20px;
+            background-color: #f1f3f5; /* Fondo gris claro para distinguir */
+            text-align: center;
+        }
+
+        .chatbox {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid #b0bec5;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 400px;
+            overflow-y: auto;
+            background-color: #f9f7f6;
+        }
+
+        .message {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.user .text {
+            background-color: #D35400;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .text {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .message.agent .text {
+            background-color: #ecf0f1;
+            color: #2C3E50;
+            text-align: left;
+        }
+
+        .input-section {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .input-section input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #b0bec5;
+            border-radius: 5px;
+        }
+
+        .input-section button {
+            padding: 10px 15px;
+            background-color: #D35400;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .input-section button:hover {
+            background-color: #E67E22;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #E67E22;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-status-bar">
+            <span>Estado: Alerta Moderada de Calor • Humedad: 25% • Temperatura: 35°C</span>
+        </div>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="/images/SRCS.png" alt="Logo Secretaría" class="logo">
+                <img src="/images/UE.png" alt="Logo Adicional" class="additional-logo">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#monitoreo">Monitoreo</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="welcome-section">
+        <div class="welcome-content">
+            <h2>Bienvenidos a la Secretaría de Resiliencia al Calor y la Sequía</h2>
+            <p>Desarrollamos y aplicamos tanto políticas como programas en innovación y nuevas tecnologías para mitigar los efectos del calor extremo y la sequía en Madrid</p>
+        </div>
+    </section>
+
+    <!-- Sección Monitoreo -->
+    <section id="monitoreo" class="monitor-section">
+        <h2>Estado Actual de Madrid</h2>
+        <div class="monitor-content">
+            <div class="monitor-map">
+                <img src="images/map.png" alt="Mapa de Monitoreo de Sequía y Calor">
+            </div>
+            <div class="monitor-indicators">
+                <p><strong>Sensación Térmica:</strong> Muy Alta</p>
+                <p><strong>Zonas en Riesgo:</strong> Centro, Sur de Madrid</p>
+                <p><strong>Índice de Sequía:</strong> 85%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Programas -->
+    <section id="programas" class="program-section">
+        <h2>Programas Actuales</h2>
+        <div class="program-cards">
+            <div class="program-card">
+                <h3>Enfriamiento Nocturno de Áreas Urbanas</h3>
+                <p>Implementación de sistemas de enfriamiento en zonas críticas para reducir el impacto del calor.</p>
+                <div class="program-status">Estado: En Desarrollo</div>
+                <div class="progress-bar-container">
+                    <div class="progress" data-value="70" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="program-card">
+                <h3>Recuperación de Aguas Grises</h3>
+                <p>Proyecto para recolectar y tratar aguas residuales para su reutilización en riego urbano.</p>
+                <div class="program-status">Estado: Activo</div>
+                <div class="progress-bar-container">
+                    <div class="progress" data-value="90" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="program-card">
+                <h3>Adaptación de Espacios Verdes</h3>
+                <p>Renovación de parques y jardines con vegetación resistente a la sequía.</p>
+                <div class="program-status">Estado: En Planificación</div>
+                <div class="progress-bar-container">
+                    <div class="progress" data-value="50" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="program-card">
+                <h3>Alertas Ciudadanas de Calor</h3>
+                <p>Sistema de notificación para informar a los ciudadanos sobre olas de calor en tiempo real.</p>
+                <div class="program-status">Estado: Implementado</div>
+                <div class="progress-bar-container">
+                    <div class="progress" data-value="100" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Chief Heat and Drought Officer -->
+    <section class="chief-section">
+        <h2>Conoce a Isabél Sánchez</h2>
+        <div class="chief-content">
+            <div class="chief-image"></div>
+            <div class="chief-text">
+                <h3>Jefa de Calor y Sequía</h3>
+                <p> Madrid ha dado un paso innovador en su compromiso de hacer frente al calor extremo al nombrar a Isabel Sánchez primera Jefa de Calor y Sequía de la ciudad. Con una amplia experiencia en planificación urbana y política medioambiental, Sánchez aporta una perspectiva única a los retos que plantea el calor extremo, utilizando los activos culturales e históricos de Madrid para crear soluciones sostenibles.</p>
+                <p>Ocupa un alto cargo ejecutivo en el Ayuntamiento de Madrid, bajo las órdenes directas del Alcalde. Su función es supervisar y coordinar todos los aspectos de las estrategias de resistencia al calor de la ciudad, garantizando un enfoque global e integrado para hacer frente a estos retos críticos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto (Chatbot) -->
+    <section id="contacto" class="contact-section">
+        <h2>Conéctate con LEAFY</h2>
+        <div class="chatbox" id="chatbox">
+            <div class="message agent">
+                <div class="text">¡Hola! Soy LEAFY, tu bocanada de aire fresco. ¿En qué puedo ayudarte hoy?</div>
+            </div>
+        </div>
+        <div class="input-section">
+            <input type="text" id="user-input" placeholder="Escribe tu mensaje aquí...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2030 Secretaría de Resiliencia frente al Calor y la Sequía - Ministerio de Transformación Ecológica y Desafíos Demográficos - Madrid</p>
+        <p>Página web de Diseño Ficción ambientada en una Madrid más resiliente - Heated Consultancy | <a href="#contacto">Contáctanos</a></p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() !== '') {
+                const chatbox = document.getElementById('chatbox');
+
+                // Agregar mensaje del usuario
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('message', 'user');
+                const userText = document.createElement('div');
+                userText.classList.add('text');
+                userText.innerText = userInput;
+                userMessage.appendChild(userText);
+                chatbox.appendChild(userMessage);
+
+                // Respuesta del asistente (simulación)
+                const agentMessage = document.createElement('div');
+                agentMessage.classList.add('message', 'agent');
+                const agentText = document.createElement('div');
+                agentText.classList.add('text');
+                agentText.innerText = 'Gracias por tu consulta. Actualmente estamos en alerta de calor moderada. Pronto te daremos más detalles.';
+                agentMessage.appendChild(agentText);
+                chatbox.appendChild(agentMessage);
+
+                // Limpiar entrada de usuario
+                document.getElementById('user-input').value = '';
+
+                // Desplazar al último mensaje
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
